@@ -15,6 +15,15 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from daisy device
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
+PRODUCT_USE_DYNAMIC_PARTITIONS := false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.state=encrypted \
+    ro.crypto.type=file
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/cryptfs_hw
+
 PRODUCT_DEVICE := daisy
 PRODUCT_NAME := twrp_daisy
 PRODUCT_BRAND := Xiaomi
