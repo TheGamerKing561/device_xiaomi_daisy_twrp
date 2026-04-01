@@ -32,3 +32,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8953 \
     ro.hardware.gatekeeper=msm8953 \
     ro.hardware.bootctrl=msm8953
+
+# Decryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
