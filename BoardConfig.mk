@@ -7,6 +7,8 @@
 
 DEVICE_PATH := device/xiaomi/daisy
 
+COMMON_PATH := device/xiaomi/mithorium-common
+
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
