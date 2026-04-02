@@ -6,6 +6,18 @@
 #
 
 LOCAL_PATH := device/xiaomi/daisy
+
+# Crypto
+MITHORIUM_INCLUDE_CRYPTO_FBE := true
+MITHORIUM_INCLUDE_CRYPTO_FDE := true
+MITHORIUM_LEGACY_CRYPTO := true
+
+# Fstab
+MITHORIUM_USES_DEVICE_SPECIFIC_FSTAB := true
+
+# Inherit from mithorium-common
+$(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
